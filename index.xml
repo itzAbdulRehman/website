@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>itexpert120</title>
-    <link>https://itexpert120.github.io/</link>
+    <link>/</link>
     <description>Recent content on itexpert120</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://itexpert120.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://itexpert120.github.io/about/</link>
+      <link>/about/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://itexpert120.github.io/about/</guid>
+      <guid>/about/</guid>
       <description>Hi there My name is Muhammad Zeeshan Ahmad, more commonly known as @itexpert120 or @itexpert.120 (on XDA Developers).
 I am a ummm&amp;hellip;. That&amp;rsquo;s a pretty complicated question even I&amp;rsquo;m trying to answer myself. Let&amp;rsquo;s start from begining, shall we?
 I am an Android Developer, not an apps one but rather the OS one. I currently maintain a device known as Samsung Galaxy Grand Prime. I am also an aspiring Developer. I am also interested in Photography and Arts.</description>
@@ -24,20 +24,20 @@ I am an Android Developer, not an apps one but rather the OS one. I currently ma
     
     <item>
       <title>My First Blog Post</title>
-      <link>https://itexpert120.github.io/posts/my-first-post/</link>
+      <link>/posts/my-first-post/</link>
       <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://itexpert120.github.io/posts/my-first-post/</guid>
+      <guid>/posts/my-first-post/</guid>
       <description>Finally Did it This is my first blog post. Well, that&amp;rsquo;s all. Catch ya later!
 Bye for Now!</description>
     </item>
     
     <item>
       <title>Contact Me</title>
-      <link>https://itexpert120.github.io/follow/</link>
+      <link>/follow/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://itexpert120.github.io/follow/</guid>
+      <guid>/follow/</guid>
       <description>Contact Me You can find this retard here (might as well follow me, I&amp;rsquo;ll appriciate that)
 Mail: itexpert120@github.com
 Instagram: https://www.instagram.com/itexpert120/
@@ -49,10 +49,10 @@ Discord: zeeshan#3985</description>
     
     <item>
       <title>Downloads</title>
-      <link>https://itexpert120.github.io/downloads/</link>
+      <link>/downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://itexpert120.github.io/downloads/</guid>
+      <guid>/downloads/</guid>
       <description>Downloads Here you can find all my builds on Android File Host https://www.androidfilehost.com/?w=files&amp;amp;flid=304928
 (some may not boot at all. or even if they boot by accident, expect bugs) ;)
 More links soon</description>
