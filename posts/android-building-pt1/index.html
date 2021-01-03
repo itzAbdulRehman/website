@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Building Android Part 1 :: itexpert120</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here we Go So you decided to build android yourself? Nice.
+First things First: There are some requirments to build Android ROMs.
+As Stated by Google:
+ A 64-bit environment is required for Android 2.3.x (Gingerbread) and higher versions, including the master branch. You can compile older versions on 32-bit systems. At least 250GB of free disk space to check out the code and an extra 150 GB to build it." />
+<meta name="keywords" content="itexpert120," />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/android-building-pt1/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="itexpert120" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Building Android Part 1">
+<meta property="og:description" content="Setting Up the Build Enviorment" />
+<meta property="og:url" content="/posts/android-building-pt1/" />
+<meta property="og:site_name" content="itexpert120" />
+
+  
+    <meta property="og:image" content="/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-01-03 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    itexpert120
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/follow">Contact Me</a></li>
+        
+      
+        
+          <li><a href="/downloads">Downloads</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/follow">Contact Me</a></li>
+      
+    
+      
+        <li><a href="/downloads">Downloads</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/android-building-pt1/">Building Android Part 1</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2020-01-03 
+      </span>
+    
+    
+    <span class="post-author">:: itexpert120</span>
+    
+  </div>
+
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h1 id="here-we-go">Here we Go<a href="#here-we-go" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>So you decided to build android yourself? Nice.</p>
+<p>First things First:
+There are some requirments to build Android ROMs.</p>
+<p>As Stated by Google:</p>
+<ol>
+<li>A 64-bit environment is required for Android 2.3.x (Gingerbread) and higher versions, including the master branch. You can compile older versions on 32-bit systems.</li>
+<li>At least 250GB of free disk space to check out the code and an extra 150 GB to build it. If you conduct multiple builds, you need additional space.</li>
+<li>If you&rsquo;re running Linux, you need at least 16 GB of available RAM/swap.</li>
+</ol>
+<p>A faster CPU will build faster, the more cores the better.</p>
+<p>Another is something that I&rsquo;d recommend, a fairly fast internet connection. &lsquo;Cause we are gonna be downloading a lot of stuff later. (around 40 gigs)</p>
+<p>I&rsquo;m just gonna assume that you know what linux is and are using it. (either vm or install)</p>
+<p>DISCLAIMER: We are going to be working in terminal most of the time. So if you are someone who fears the command line, leave now :)</p>
+<p>First things first, lets setup the enviorment to be able to build at all.
+I&rsquo;m gonna assume that you are using Debain/Ubuntu or a Derivative. If not, I suggest you use Ubuntu.</p>
+<p>First, we are gonna update our system. To do that:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
+sudo apt upgrade
+</code></pre></div><p>After updating our system, let&rsquo;s install git:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install git
+</code></pre></div><p>Enter your password and follow through.
+In the mean time, go and create a github account. (if you don&rsquo;t have one already)</p>
+<p>After installing git, let&rsquo;s download a script that&rsquo;ll setup the android build enviorment:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/akhilnarang/scripts
+</code></pre></div><p>Let&rsquo;s change directory into it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd scripts
+</code></pre></div><p>Now, let&rsquo;s execute the main script:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">bash setup/android_build_env.sh
+</code></pre></div><p>After that, just follow through what the script asks and when it&rsquo;ll be done; your PC would be ready to build Android.</p>
+<p>To be continued in Part 2.</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="/posts/my-first-post/">
+                <span class="button__text">My First Blog Post</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
