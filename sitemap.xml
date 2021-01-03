@@ -3,22 +3,35 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>itexpert120.github.io/about/</loc>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>itexpert120.github.io/</loc>
-    <lastmod>2021-01-03T21:13:00+05:00</lastmod>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>itexpert120.github.io/posts/my-first-post/</loc>
-    <lastmod>2021-01-03T21:13:00+05:00</lastmod>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>itexpert120.github.io/posts/</loc>
-    <lastmod>2021-01-03T21:13:00+05:00</lastmod>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>itexpert120.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>itexpert120.github.io/follow/</loc>
+  </url>
+  
+  <url>
+    <loc>itexpert120.github.io/downloads/</loc>
   </url>
   
   <url>

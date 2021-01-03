@@ -6,18 +6,19 @@
     <description>Recent content in Posts on itexpert120</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 03 Jan 2021 21:13:00 +0500</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="itexpert120.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My First Post</title>
+      <title>My First Blog Post</title>
       <link>itexpert120.github.io/posts/my-first-post/</link>
-      <pubDate>Sun, 03 Jan 2021 21:13:00 +0500</pubDate>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>itexpert120.github.io/posts/my-first-post/</guid>
-      <description></description>
+      <description>Finally Did it This is my first blog post. Well, that&amp;rsquo;s all. Catch ya later!
+Bye for Now!</description>
     </item>
     
   </channel>
