@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Itexpert120.github.ios on itexpert120</title>
+    <link>https://itexpert120.github.io/itexpert120.github.io/</link>
+    <description>Recent content in Itexpert120.github.ios on itexpert120</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://itexpert120.github.io/itexpert120.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Blog Post</title>
+      <link>https://itexpert120.github.io/itexpert120.github.io/posts/my-first-post/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://itexpert120.github.io/itexpert120.github.io/posts/my-first-post/</guid>
+      <description>Finally Did it This is my first blog post. Well, that&amp;rsquo;s all. Catch ya later!
+Bye for Now!</description>
+    </item>
+    
+  </channel>
+</rss>
