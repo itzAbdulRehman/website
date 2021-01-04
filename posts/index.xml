@@ -6,10 +6,20 @@
     <description>Recent content in Posts on itexpert120</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My First Post</title>
+      <link>/posts/my-first-post/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/my-first-post/</guid>
+      <description>Finally Did it This is my first blog post. Well, that&amp;rsquo;s all. Catch ya later!
+Bye for Now!</description>
+    </item>
     
     <item>
       <title>Building Android Part 1</title>
@@ -21,16 +31,6 @@
 First things First: There are some requirments to build Android ROMs.
 As Stated by Google:
  A 64-bit environment is required for Android 2.3.x (Gingerbread) and higher versions, including the master branch. You can compile older versions on 32-bit systems. At least 250GB of free disk space to check out the code and an extra 150 GB to build it.</description>
-    </item>
-    
-    <item>
-      <title>My First Blog Post</title>
-      <link>/posts/my-first-post/</link>
-      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/my-first-post/</guid>
-      <description>Finally Did it This is my first blog post. Well, that&amp;rsquo;s all. Catch ya later!
-Bye for Now!</description>
     </item>
     
   </channel>
