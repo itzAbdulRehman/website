@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Building Android Part 1</title>
+      <link>/posts/android-building-pt1/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/android-building-pt1/</guid>
+      <description>Here we Go So you decided to build android yourself? Nice.
+First things First: There are some requirments to build Android ROMs.
+As Stated by Google:
+ A 64-bit environment is required for Android 2.3.x (Gingerbread) and higher versions, including the master branch. You can compile older versions on 32-bit systems. At least 250GB of free disk space to check out the code and an extra 150 GB to build it.</description>
+    </item>
+    
+    <item>
       <title>My First Post</title>
       <link>/posts/my-first-post/</link>
       <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
@@ -22,26 +34,14 @@ Bye for Now!</description>
     </item>
     
     <item>
-      <title>Building Android Part 1</title>
-      <link>/posts/android-building-pt1/</link>
-      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/android-building-pt1/</guid>
-      <description>Here we Go So you decided to build android yourself? Nice.
-First things First: There are some requirments to build Android ROMs.
-As Stated by Google:
- A 64-bit environment is required for Android 2.3.x (Gingerbread) and higher versions, including the master branch. You can compile older versions on 32-bit systems. At least 250GB of free disk space to check out the code and an extra 150 GB to build it.</description>
-    </item>
-    
-    <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
       <description>Hi there My name is Muhammad Zeeshan Ahmad, more commonly known as @itexpert120 or @itexpert.120 (on XDA Developers).
-I am a ummm&amp;hellip;. That&amp;rsquo;s a pretty complicated question even I&amp;rsquo;m trying to answer myself. Let&amp;rsquo;s start from begining, shall we?
-I am an Android Developer, not an apps one but rather the OS one. I currently maintain a device known as Samsung Galaxy Grand Prime. I am also an aspiring Developer. I am also interested in Photography and Arts.</description>
+I am a ummm&amp;hellip;. even I don&amp;rsquo;t know the answer to this question myself. Let&amp;rsquo;s take a step back first.
+I am an Android Developer, not an apps one but rather the OS one. I currently maintain a device known as Samsung Galaxy Grand Prime. I am also an aspiring Python Developer. I am also interested in Photography and Arts.</description>
     </item>
     
     <item>
@@ -50,13 +50,15 @@ I am an Android Developer, not an apps one but rather the OS one. I currently ma
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/follow/</guid>
-      <description>Contact Me You can find this retard here (might as well follow me, I&amp;rsquo;ll appriciate that)
-Mail: itexpert120@github.com
-Instagram: https://www.instagram.com/itexpert120/
-GitHub: https://github.com/itexpert120/
-XDA: https://forum.xda-developers.com/m/itexpert-120.9032595/
-Telegram: https://t.me/itexpert120/
-Discord: zeeshan#3985</description>
+      <description>Contact Me You can follow/contact me here:
+  My Gmail: itexpert120@github.com
+  Instagram: https://www.instagram.com/itexpert120
+  Twitter : https://twitter.com/itexpert120
+  GitHub: https://github.com/itexpert120
+  XDA: https://forum.xda-developers.com/m/itexpert-120.9032595
+  Telegram: https://t.me/itexpert120
+  Discord: zeeshan#3985
+  </description>
     </item>
     
     <item>
@@ -65,9 +67,9 @@ Discord: zeeshan#3985</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/downloads/</guid>
-      <description>LineageOS 17.1 Stable Builds Latest Stable Builds for LineageOS 17.1 for Galaxy Grand Prime https://www.androidfilehost.com/?w=files&amp;amp;flid=321629
-All Downloads Here you can find all my builds on Android File Host https://www.androidfilehost.com/?w=files&amp;amp;flid=304928
-(some may not boot at all. or even if they boot by accident, expect bugs) ;)</description>
+      <description>LineageOS 17.1 Stable Builds Latest Stable Builds for LineageOS 17.1 for Galaxy Grand Prime
+ https://www.androidfilehost.com/?w=files&amp;amp;flid=321629  All Downloads Here you can find all my builds on Android File Host
+ https://www.androidfilehost.com/?w=files&amp;amp;flid=304928  (some may not boot at all. or even if they boot by accident, expect bugs) ;)</description>
     </item>
     
   </channel>
