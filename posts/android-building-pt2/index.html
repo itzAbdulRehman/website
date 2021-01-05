@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Building Android Part 2 :: itexpert120</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Here we Go&amp;hellip; again Ok so last time we made our linux install ready to be able to build android roms. Now we are going to download android source along with device specific sources.
+First we are going to download a tool called Repo made by Google. It alows us to manage multiple git repos all at once. Really nice tool.
+So first
+mkdir ~/bin PATH=~/bin:$PATH Then download it and make it executeable:" />
+<meta name="keywords" content="itexpert120," />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/android-building-pt2/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="itexpert120" />
+  
+    <meta name="twitter:creator" content="itexpert120" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Building Android Part 2">
+<meta property="og:description" content="Downloading the Source" />
+<meta property="og:url" content="/posts/android-building-pt2/" />
+<meta property="og:site_name" content="itexpert120" />
+
+  
+    <meta property="og:image" content="/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-01-05 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    itexpert120
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/follow">Contact Me</a></li>
+        
+      
+        
+          <li><a href="/downloads">Downloads</a></li>
+        
+      
+        
+          <li><a href="https://github.com/itexpert120">Github</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/follow">Contact Me</a></li>
+      
+    
+      
+        <li><a href="/downloads">Downloads</a></li>
+      
+    
+      
+        <li><a href="https://github.com/itexpert120">Github</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/android-building-pt2/">Building Android Part 2</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-01-05 
+      </span>
+    
+    
+    <span class="post-author">:: Zeeshan Ahmad</span>
+    
+  </div>
+
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="here-we-go-again">Here we Go&hellip; again<a href="#here-we-go-again" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Ok so last time we made our linux install ready to be able to build android roms. Now we are going to download android source along with device specific sources.</p>
+<p>First we are going to download a tool called Repo made by Google. It alows us to manage multiple git repos all at once. Really nice tool.</p>
+<p>So first</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/bin
+PATH<span style="color:#f92672">=</span>~/bin:$PATH
+</code></pre></div><p>Then download it and make it executeable:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
+chmod a+x ~/bin/repo
+</code></pre></div><p>Repo is now installed and ready to use.</p>
+<p>As for which ROM we are going to build? There is a great github repo that contains a list of Android ROMs along with their current version and status.</p>
+<ul>
+<li><a href="https://github.com/rokibhasansagar/Awesome-Android-OS-List">https://github.com/rokibhasansagar/Awesome-Android-OS-List</a></li>
+</ul>
+<p>For starters, I&rsquo;d recommend to build LineageOS. It&rsquo;s both Fast and Stable.</p>
+<p>Let&rsquo;s create a directory for LineageOS:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/LineageOS
+cd ~/LineageOS
+</code></pre></div><p>Now we open the manifest repo for LineageOS. A manifest is just a collection of the repositories that are needed for that specific project. If you look inside a manifest file, you&rsquo;ll see:</p>
+<ol>
+<li>Remotes (github, gitlab or specific users etc) basically where to get the repositories</li>
+<li>Names of repositories along with their paths and branches.</li>
+</ol>
+<p>That&rsquo;s all.</p>
+<p>Let&rsquo;s look for LineageOS manifest.
+Go to LineageOS Github:</p>
+<ul>
+<li><a href="https://github.com/LineageOS">https://github.com/LineageOS</a></li>
+</ul>
+<p>And open the &ldquo;android&rdquo; repository, LineageOS calls it&rsquo;s manifest repo  &ldquo;android&rdquo; but other roms may also call it manifest.</p>
+<ul>
+<li><a href="https://github.com/LineageOS/android">https://github.com/LineageOS/android</a></li>
+</ul>
+<p>Here select the branch you want to build for. I&rsquo;m going to name some of LineageOS branches with their Android version:</p>
+<ol>
+<li>Lineage 14.1 (Android 7.1)</li>
+<li>Lineage 15.1 (Android 8.1)</li>
+<li>Lineage 16.0 (Android 9.0)</li>
+<li>Lineage 17.1 (Android 10.0)</li>
+<li>Lineage 18.1 (Android 11.0)</li>
+</ol>
+<p>For this tutorial, we are going to use the Lineage 17.1 branch.
+After changing the branch to &ldquo;lineage-17.1&rdquo;, scroll down to README.mkdn file and look for command like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo init -u git://github.com/LineageOS/android.git -b lineage-17.1
+</code></pre></div><p>This command tell&rsquo;s the repo tool that we want to sync LineageOS and lineage-17.1 branch.</p>
+<p>Now we add a local manifest to the .repo/local_manifest folder. This file is also a manifest but a custom one. It contains the device trees, kernel, vendor and also device specific stuff. You can create your own or use an already created one.</p>
+<p>In this example, I&rsquo;m going to use my own.
+First, I am going to create a folder for local manifests if not already there:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir -p .repo/local_manifests
+</code></pre></div><p>Now I am going to download and add my .xml manifest to the .repo/local_manifest directory. The manifest file can be named almost anything followed by a .xml in the end.
+For the sake of this tutorial, I am going to download the following file and place it into the .repo/local_manifests folder</p>
+<ul>
+<li><a href="https://github.com/itexpert120/local_manifests/blob/master/lineage-17.1.xml">https://github.com/itexpert120/local_manifests/blob/master/lineage-17.1.xml</a></li>
+</ul>
+<p>After doing that, we are going to download both the andriod source and device specific stuff together. To do that:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo sync
+</code></pre></div><p>But the local manifest may contain some overlapping repos, so we can use this command to prioritize the local manifest over the main manifest file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo sync --force-sync
+</code></pre></div><p>We can also make this faster by specifying the number of parralell jobs.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo sync --force-sync -j<span style="color:#66d9ef">$(</span>nproc --all<span style="color:#66d9ef">)</span>
+</code></pre></div><p>This tells repo to use all CPU cores to download the repos in paralell.
+Now we wait till it downloads. It&rsquo;s gonna take some time because this can take over 20-40 gigabytes of download.</p>
+<p>That&rsquo;s the end of part 2.</p>
+<p>Catch ya in the next part!</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="/posts/android-building-pt1/">
+                <span class="button__text">Building Android Part 1</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "itexpert120" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
