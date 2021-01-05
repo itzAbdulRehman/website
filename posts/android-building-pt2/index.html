@@ -7,7 +7,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Here we Go&amp;hellip; again Ok so last time we made our linux install ready to be able to build android roms. Now we are going to download android source along with device specific sources.
-First we are going to download a tool called Repo made by Google. It alows us to manage multiple git repos all at once. Really nice tool.
+Repo First we are going to download a tool called Repo made by Google. It alows us to manage multiple git repos all at once. Really nice tool.
 So first
 mkdir ~/bin PATH=~/bin:$PATH Then download it and make it executeable:" />
 <meta name="keywords" content="itexpert120," />
@@ -165,6 +165,7 @@ mkdir ~/bin PATH=~/bin:$PATH Then download it and make it executeable:" />
   <div class="post-content"><div>
         <h2 id="here-we-go-again">Here we Go&hellip; again<a href="#here-we-go-again" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <p>Ok so last time we made our linux install ready to be able to build android roms. Now we are going to download android source along with device specific sources.</p>
+<h3 id="repo">Repo<a href="#repo" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>First we are going to download a tool called Repo made by Google. It alows us to manage multiple git repos all at once. Really nice tool.</p>
 <p>So first</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/bin
@@ -172,7 +173,8 @@ PATH<span style="color:#f92672">=</span>~/bin:$PATH
 </code></pre></div><p>Then download it and make it executeable:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
 chmod a+x ~/bin/repo
-</code></pre></div><p>Repo is now installed and ready to use.</p>
+</code></pre></div><p>Repo is now installed and ready to use. (Note that repo only needs to be installed once, it&rsquo;s not needed to do these steps if you&rsquo;ve already done them once)</p>
+<h3 id="android-custom-roms-list">Android Custom ROMs List<a href="#android-custom-roms-list" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>As for which ROM we are going to build? There is a great github repo that contains a list of Android ROMs along with their current version and status.</p>
 <ul>
 <li><a href="https://github.com/rokibhasansagar/Awesome-Android-OS-List">https://github.com/rokibhasansagar/Awesome-Android-OS-List</a></li>
@@ -181,7 +183,8 @@ chmod a+x ~/bin/repo
 <p>Let&rsquo;s create a directory for LineageOS:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir ~/LineageOS
 cd ~/LineageOS
-</code></pre></div><p>Now we open the manifest repo for LineageOS. A manifest is just a collection of the repositories that are needed for that specific project. If you look inside a manifest file, you&rsquo;ll see:</p>
+</code></pre></div><h3 id="manifest">Manifest<a href="#manifest" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Now we open the manifest repo for LineageOS. A manifest is just a collection of the repositories that are needed for that specific project. If you look inside a manifest file, you&rsquo;ll see:</p>
 <ol>
 <li>Remotes (github, gitlab or specific users etc) basically where to get the repositories</li>
 <li>Names of repositories along with their paths and branches.</li>
@@ -208,6 +211,7 @@ Go to LineageOS Github:</p>
 After changing the branch to &ldquo;lineage-17.1&rdquo;, scroll down to README.mkdn file and look for command like:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo init -u git://github.com/LineageOS/android.git -b lineage-17.1
 </code></pre></div><p>This command tell&rsquo;s the repo tool that we want to sync LineageOS and lineage-17.1 branch.</p>
+<h3 id="local-manifests">Local Manifests<a href="#local-manifests" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>Now we add a local manifest to the .repo/local_manifest folder. This file is also a manifest but a custom one. It contains the device trees, kernel, vendor and also device specific stuff. You can create your own or use an already created one.</p>
 <p>In this example, I&rsquo;m going to use my own.
 First, I am going to create a folder for local manifests if not already there:</p>
@@ -217,16 +221,19 @@ For the sake of this tutorial, I am going to download the following file and pla
 <ul>
 <li><a href="https://github.com/itexpert120/local_manifests/blob/master/lineage-17.1.xml">https://github.com/itexpert120/local_manifests/blob/master/lineage-17.1.xml</a></li>
 </ul>
+<h3 id="syncing">Syncing<a href="#syncing" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <p>After doing that, we are going to download both the andriod source and device specific stuff together. To do that:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo sync
-</code></pre></div><p>But the local manifest may contain some overlapping repos, so we can use this command to prioritize the local manifest over the main manifest file:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo sync --force-sync
-</code></pre></div><p>We can also make this faster by specifying the number of parralell jobs.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo sync --force-sync -j<span style="color:#66d9ef">$(</span>nproc --all<span style="color:#66d9ef">)</span>
-</code></pre></div><p>This tells repo to use all CPU cores to download the repos in paralell.
-Now we wait till it downloads. It&rsquo;s gonna take some time because this can take over 20-40 gigabytes of download.</p>
-<p>That&rsquo;s the end of part 2.</p>
-<p>Catch ya in the next part!</p>
+</code></pre></div><p>I&rsquo;m gonna break this command down.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo sync
+</code></pre></div><p>This tells the repo command to sync/download the repos in manifests.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo sync --force-sync
+</code></pre></div><p>This option &ldquo;&ndash;force-sync&rdquo; tells the repo command to prioritize the local manifests over the main manifest file. If we don&rsquo;t add that, we might experice errors saying duplicate repository.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">repo sync --force-sync -j<span style="color:#66d9ef">$(</span>nproc --all<span style="color:#66d9ef">)</span>
+</code></pre></div><p>This option &ldquo;-j$(nproc &ndash;all)&rdquo; tells repo to download in paralell using all the cores available to CPU, thus making it faster. The higher the cores in our CPU, the faster this command will be finished.</p>
+<p>After initiating a repo sync, we wait for it to finish before proceeding.</p>
+<p>That&rsquo;s All for Part 2</p>
+<p>Catch ya in the next Part!</p>
 
       </div></div>
 
