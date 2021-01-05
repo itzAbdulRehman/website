@@ -17,7 +17,7 @@
       <pubDate>Tue, 05 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>/posts/android-building-pt2/</guid>
-      <description>Here we Go&amp;hellip; again Ok so last time we made our linux install ready to be able to build android roms. Now we are going to download android source along with device specific sources.
+      <description>&amp;ldquo;Ahh sh*t, here we go again&amp;rdquo; Ok so last time we made our linux install ready to be able to build android roms. Now we are going to download android source along with device specific sources.
 Repo First we are going to download a tool called Repo made by Google. It alows us to manage multiple git repos all at once. Really nice tool.
 So first
 mkdir ~/bin PATH=~/bin:$PATH Then download it and make it executeable:</description>
