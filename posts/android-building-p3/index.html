@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Building Android Part 3 :: itexpert120</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ok, this is gonna be last of the basic So far we have setup the linux install to be able to build, download the source. Now, we are going to build the ROM for our device so that we can flash it.
+Setting the Env I&amp;rsquo;mma go straight into it and explaining as we go, go to the ROM directory where we synced it:
+source build/envsetup.sh or:
+. build/envsetup.sh Here is the breakdown, we are telling the shell to use that file to setup the enviormental variables to be able to start the build." />
+<meta name="keywords" content="itexpert120," />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/android-building-p3/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="itexpert120" />
+  
+    <meta name="twitter:creator" content="itexpert120" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Building Android Part 3">
+<meta property="og:description" content="Building the ROM" />
+<meta property="og:url" content="/posts/android-building-p3/" />
+<meta property="og:site_name" content="itexpert120" />
+
+  
+    <meta property="og:image" content="/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2021-01-07 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    itexpert120
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/follow">Contact Me</a></li>
+        
+      
+        
+          <li><a href="/downloads">Downloads</a></li>
+        
+      
+        
+          <li><a href="https://github.com/itexpert120">Github</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/follow">Contact Me</a></li>
+      
+    
+      
+        <li><a href="/downloads">Downloads</a></li>
+      
+    
+      
+        <li><a href="https://github.com/itexpert120">Github</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/android-building-p3/">Building Android Part 3</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2021-01-07 
+      </span>
+    
+    
+    <span class="post-author">:: Zeeshan Ahmad</span>
+    
+  </div>
+
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <h2 id="ok-this-is-gonna-be-last-of-the-basic">Ok, this is gonna be last of the basic<a href="#ok-this-is-gonna-be-last-of-the-basic" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>So far we have setup the linux install to be able to build, download the source. Now, we are going to build the ROM for our device so that we can flash it.</p>
+<h3 id="setting-the-env">Setting the Env<a href="#setting-the-env" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>I&rsquo;mma go straight into it and explaining as we go, go to the ROM directory where we synced it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">source build/envsetup.sh
+</code></pre></div><p>or:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">. build/envsetup.sh
+</code></pre></div><p>Here is the breakdown, we are telling the shell to use that file to setup the enviormental variables to be able to start the build. That&rsquo;s all there is to it. You can use both the &ldquo;source&rdquo; and &ldquo;.&rdquo; to trigger that script.</p>
+<h3 id="the-lunch-command">The lunch command<a href="#the-lunch-command" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Now, let&rsquo;s tell the build system about the device we want to build. To do that we use the lunch command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lunch
+</code></pre></div><p>You can use lunch like this and select from the list or go like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lunch lineage_fortuna3g-userdebug
+</code></pre></div><p>If you go with just &ldquo;lunch&rdquo; then you&rsquo;ll have to look for the product you want to build and give the index number to the command, or you can just type the product you want to build right after the lunch command.</p>
+<p>I&rsquo;m gonna break the product name:</p>
+<ul>
+<li>&ldquo;lineage&rdquo; here is the name of the custom rom</li>
+<li>&ldquo;fortuna3g&rdquo; is the name of device</li>
+<li>&ldquo;userdeubg&rdquo; is the type of android build</li>
+</ul>
+<p>There are three types of android builds, &ldquo;user&rdquo; &ldquo;userdebug&rdquo; and &ldquo;eng&rdquo;. The &ldquo;user&rdquo; type is used for stock roms by OEMs. The &ldquo;eng&rdquo; type build is used in initial builds for a device for debugging. The &ldquo;userdeubg&rdquo; type is generally used for Custom ROMs since it is both stable and can be used for little bit of debugging.</p>
+<h3 id="building-the-rom">Building the ROM<a href="#building-the-rom" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Now after we&rsquo;ve specified the product, we wanna launch the build:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brunch fortuna3g
+</code></pre></div><p>This will start the build for fortuna3g.
+Or we can go about the classic way of building it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mka bacon -j<span style="color:#66d9ef">$(</span>nproc --all<span style="color:#66d9ef">)</span>
+</code></pre></div><p>The brunch command is the same as lunch and mka bacon combined.
+If we are building lineage, it&rsquo;ll build without any error (most of the time).</p>
+<h3 id="getting-the-zip">Getting the zip<a href="#getting-the-zip" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>After the build is done, you should see some completion message.
+To find your build, go to the following directory:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd out/target/product
+</code></pre></div><p>Here you&rsquo;ll find a folder for your device and a compiled zip inside that folder along with other stuff, just copy that zip to your device and flash via TWRP.</p>
+<p>You&rsquo;ve successfully Compiled a ROM!</p>
+<p>I&rsquo;m out, end of part 3.</p>
+<p>There will be a part 4, so stay tuned ;)</p>
+
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h">Read other posts</span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="/posts/android-building-pt2/">
+                <span class="button__text">Building Android Part 2</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "itexpert120" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

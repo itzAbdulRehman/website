@@ -6,10 +6,22 @@
     <description>Recent content on itexpert120</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building Android Part 3</title>
+      <link>/posts/android-building-p3/</link>
+      <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/android-building-p3/</guid>
+      <description>Ok, this is gonna be last of the basic So far we have setup the linux install to be able to build, download the source. Now, we are going to build the ROM for our device so that we can flash it.
+Setting the Env I&amp;rsquo;mma go straight into it and explaining as we go, go to the ROM directory where we synced it:
+source build/envsetup.sh or:
+. build/envsetup.sh Here is the breakdown, we are telling the shell to use that file to setup the enviormental variables to be able to start the build.</description>
+    </item>
     
     <item>
       <title>Building Android Part 2</title>
