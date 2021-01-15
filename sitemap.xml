@@ -38,12 +38,11 @@
   </url>
   
   <url>
-    <loc>https://itexpert120.github.io/downloads/</loc>
-    <priority>0</priority>
+    <loc>https://itexpert120.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>https://itexpert120.github.io/categories/</loc>
+    <loc>https://itexpert120.github.io/downloads/</loc>
   </url>
   
 </urlset>
