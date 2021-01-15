@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>building android | itexpert120</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="how to do it">
+  <meta name="keywords" content="android , custom , roms">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="building android" />
+  <meta name="twitter:description" content="how to do it"/>
+  <meta name="twitter:site" content="https://twitter.com/itexpert120" />
+  <meta name="twitter:creator" content="https://twitter.com/itexpert120" />
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.b60e0932fe1c50c3d7c5b4f83ee9e4592363654d0f2abf05bbd0678d5b8a214c.css" integrity="sha256-tg4JMv4cUMPXxbT4PunkWSNjZU0PKr8Fu9BnjVuKIUw="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/itexpert120.github.io\/"
+      },
+      "articleSection" : "blog",
+      "name" : "building android",
+      "headline" : "building android",
+      "description" : "how to do it",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2021",
+      "datePublished": "2021-01-15 20:22:55 \u002b0500 PKT",
+      "dateModified" : "2021-01-15 20:22:55 \u002b0500 PKT",
+      "url" : "https:\/\/itexpert120.github.io\/blog\/building-android\/",
+      "wordCount" : "1239",
+      "keywords" : ["android", "custom", "roms", "Blog"]
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/blog">blog</a>
+      </li>
+    
+      <li>
+        <a  href="/downloads">downloads</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">building android</h1>
+            <time datetime="2021-01-15 20:22:55 &#43;0500 PKT" class="post__date">Jan 15 2021</time> 
+          </header>
+          <article class="post__content">
+              
+<h2 id="here-we-go">Here we Go<a class="anchor" href="#here-we-go">#</a></h2>
+<p>So you decided to build android yourself? Nice.</p>
+<p>First things First:</p>
+<h3 id="requirements">requirements<a class="anchor" href="#requirements">#</a></h3>
+<p>There are some requirements to build Android ROMs.</p>
+<p>As Stated by Google:</p>
+<ul>
+<li>A 64-bit environment is required for Android 2.3.x (Gingerbread) and higher versions, including the master branch. You can compile older versions on 32-bit systems.</li>
+<li>At least 250GB of free disk space to check out the code and an extra 150 GB to build it. If you conduct multiple builds, you need additional space.</li>
+<li>If you&rsquo;re running Linux, you need at least 16 GB of available RAM/swap.</li>
+</ul>
+<p>A faster CPU will build faster, the more cores the better.</p>
+<p>Another is something that I&rsquo;d recommend, a fairly fast internet connection. &lsquo;Cause we are gonna be downloading a lot of stuff later. (around 40 gigs)</p>
+<p>I&rsquo;m just gonna assume that you know what linux is and are using it. (either vm or install)</p>
+<p>DISCLAIMER: We are going to be working in terminal most of the time. So if you are someone who fears the command line, leave now :)</p>
+<h3 id="setting-build-env">setting build env<a class="anchor" href="#setting-build-env">#</a></h3>
+<p>First things first, lets setup the enviorment to be able to build at all.
+I&rsquo;m gonna assume that you are using Debain/Ubuntu or a Derivative. If not, I suggest you use Ubuntu.</p>
+<p>First, we are gonna update our system. To do that:</p>
+<pre><code class="language-bash">sudo apt update
+sudo apt upgrade
+</code></pre>
+<p>After updating our system, let&rsquo;s install git:</p>
+<pre><code class="language-bash">sudo apt install git
+</code></pre>
+<p>Enter your password and follow through.
+In the mean time, go and create a github account. (if you don&rsquo;t have one already)</p>
+<p>After installing git, let&rsquo;s download a script that&rsquo;ll setup the android build enviorment:</p>
+<pre><code class="language-bash">git clone https://github.com/akhilnarang/scripts
+</code></pre>
+<p>Let&rsquo;s change directory into it:</p>
+<pre><code class="language-bash">cd scripts
+</code></pre>
+<p>Now, let&rsquo;s execute the main script:</p>
+<pre><code class="language-bash">bash setup/android_build_env.sh
+</code></pre>
+<p>After that, just follow through what the script asks and when it&rsquo;ll be done; your PC would be ready to build Android.</p>
+<h3 id="repo">repo<a class="anchor" href="#repo">#</a></h3>
+<p>First we are going to download a tool called Repo made by Google. It alows us to manage multiple git repos all at once. Really nice tool.</p>
+<p>So first</p>
+<pre><code class="language-bash">mkdir ~/bin
+PATH=~/bin:$PATH
+</code></pre>
+<p>Then download it and make it executeable:</p>
+<pre><code class="language-bash">curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo
+chmod a+x ~/bin/repo
+</code></pre>
+<p>Repo is now installed and ready to use. (Note that repo only needs to be installed once, it&rsquo;s not needed to do these steps if you&rsquo;ve already done them once)</p>
+<h3 id="custom-roms">custom roms<a class="anchor" href="#custom-roms">#</a></h3>
+<p>As for which ROM we are going to build? There is a great github repo that contains a list of Android ROMs along with their current version and status.</p>
+<ul>
+<li><a href="https://github.com/rokibhasansagar/Awesome-Android-OS-List">https://github.com/rokibhasansagar/Awesome-Android-OS-List</a></li>
+</ul>
+<p>For starters, I&rsquo;d recommend to build LineageOS. It&rsquo;s both Fast and Stable.</p>
+<p>Let&rsquo;s create a directory for LineageOS:</p>
+<pre><code class="language-bash">mkdir ~/LineageOS
+cd ~/LineageOS
+</code></pre>
+<h3 id="manifest">manifest<a class="anchor" href="#manifest">#</a></h3>
+<p>Now we open the manifest repo for LineageOS. A manifest is just a collection of the repositories that are needed for that specific project. If you look inside a manifest file, you&rsquo;ll see:</p>
+<ol>
+<li>Remotes (github, gitlab or specific users etc) basically where to get the repositories</li>
+<li>Names of repositories along with their paths and branches.</li>
+</ol>
+<p>That&rsquo;s all.</p>
+<p>Let&rsquo;s look for LineageOS manifest.
+Go to LineageOS Github:</p>
+<ul>
+<li><a href="https://github.com/LineageOS">https://github.com/LineageOS</a></li>
+</ul>
+<p>And open the &ldquo;android&rdquo; repository, LineageOS calls it&rsquo;s manifest repo  &ldquo;android&rdquo; but other roms may also call it manifest.</p>
+<ul>
+<li><a href="https://github.com/LineageOS/android">https://github.com/LineageOS/android</a></li>
+</ul>
+<p>Here select the branch you want to build for. I&rsquo;m going to name some of LineageOS branches with their Android version:</p>
+<ol>
+<li>Lineage 14.1 (Android 7.1)</li>
+<li>Lineage 15.1 (Android 8.1)</li>
+<li>Lineage 16.0 (Android 9.0)</li>
+<li>Lineage 17.1 (Android 10.0)</li>
+<li>Lineage 18.1 (Android 11.0)</li>
+</ol>
+<p>For this tutorial, we are going to use the Lineage 17.1 branch.
+After changing the branch to &ldquo;lineage-17.1&rdquo;, scroll down to README.mkdn file and look for command like:</p>
+<pre><code class="language-bash">repo init -u git://github.com/LineageOS/android.git -b lineage-17.1
+</code></pre>
+<p>This command tell&rsquo;s the repo tool that we want to sync LineageOS and lineage-17.1 branch.</p>
+<h3 id="local-manifest">local manifest<a class="anchor" href="#local-manifest">#</a></h3>
+<p>Now we add a local manifest to the .repo/local_manifest folder. This file is also a manifest but a custom one. It contains the device trees, kernel, vendor and also device specific stuff. You can create your own or use an already created one.</p>
+<p>In this example, I&rsquo;m going to use my own.
+First, I am going to create a folder for local manifests if not already there:</p>
+<pre><code class="language-bash">mkdir -p .repo/local_manifests
+</code></pre>
+<p>Now I am going to download and add my .xml manifest to the .repo/local_manifest directory. The manifest file can be named almost anything followed by a .xml in the end.
+For the sake of this tutorial, I am going to download the following file and place it into the .repo/local_manifests folder</p>
+<ul>
+<li><a href="https://github.com/itexpert120/local_manifests/blob/master/lineage-17.1.xml">https://github.com/itexpert120/local_manifests/blob/master/lineage-17.1.xml</a></li>
+</ul>
+<h3 id="syncing">syncing<a class="anchor" href="#syncing">#</a></h3>
+<p>After doing that, we are going to download both the andriod source and device specific stuff together. To do that:</p>
+<pre><code class="language-bash">repo sync --force-sync -j$(nproc --all)
+</code></pre>
+<p>I&rsquo;m gonna break this command down.</p>
+<pre><code class="language-bash">repo sync
+</code></pre>
+<p>This tells the repo command to sync/download the repos in manifests.</p>
+<pre><code class="language-bash">repo sync --force-sync
+</code></pre>
+<p>This option &ldquo;&ndash;force-sync&rdquo; tells the repo command to prioritize the local manifests over the main manifest file. If we don&rsquo;t add that, we might experice errors saying duplicate repository.</p>
+<pre><code class="language-bash">repo sync --force-sync -j$(nproc --all)
+</code></pre>
+<p>This option &ldquo;-j$(nproc &ndash;all)&rdquo; tells repo to download in paralell using all the cores available to CPU, thus making it faster. The higher the cores in our CPU, the faster this command will be finished.</p>
+<p>After initiating a repo sync, we wait for it to finish before proceeding.</p>
+<h3 id="getting-ready-to-build">getting ready to build<a class="anchor" href="#getting-ready-to-build">#</a></h3>
+<p>I&rsquo;m gonna go straight into it and explaining as we go, go to the ROM directory where we synced it:</p>
+<pre><code class="language-bash">source build/envsetup.sh
+</code></pre>
+<p>or:</p>
+<pre><code class="language-bash">. build/envsetup.sh
+</code></pre>
+<p>Here is the breakdown, we are telling the shell to use that file to setup the enviormental variables to be able to start the build. That&rsquo;s all there is to it. You can use both the &ldquo;source&rdquo; and &ldquo;.&rdquo; to trigger that script.</p>
+<h3 id="the-lunch-command">the lunch command<a class="anchor" href="#the-lunch-command">#</a></h3>
+<p>Now, let&rsquo;s tell the build system about the device we want to build. To do that we use the lunch command:</p>
+<pre><code class="language-bash">lunch
+</code></pre>
+<p>You can use lunch like this and select from the list or go like this:</p>
+<pre><code class="language-bash">lunch lineage_fortuna3g-userdebug
+</code></pre>
+<p>If you go with just &ldquo;lunch&rdquo; then you&rsquo;ll have to look for the product you want to build and give the index number to the command, or you can just type the product you want to build right after the lunch command.</p>
+<p>I&rsquo;m gonna break the product name:</p>
+<ul>
+<li>&ldquo;lineage&rdquo; here is the name of the custom rom</li>
+<li>&ldquo;fortuna3g&rdquo; is the name of device</li>
+<li>&ldquo;userdeubg&rdquo; is the type of android build</li>
+</ul>
+<p>There are three types of android builds, &ldquo;user&rdquo; &ldquo;userdebug&rdquo; and &ldquo;eng&rdquo;. The &ldquo;user&rdquo; type is used for stock roms by OEMs. The &ldquo;eng&rdquo; type build is used in initial builds for a device for debugging. The &ldquo;userdeubg&rdquo; type is generally used for Custom ROMs since it is both stable and can be used for little bit of debugging.</p>
+<h3 id="starting-the-build">starting the build<a class="anchor" href="#starting-the-build">#</a></h3>
+<p>Now after we&rsquo;ve specified the product, we wanna launch the build:</p>
+<pre><code class="language-bash">brunch fortuna3g
+</code></pre>
+<p>This will start the build for fortuna3g.
+Or we can go about the classic way of building it:</p>
+<pre><code class="language-bash">mka bacon -j$(nproc --all)
+</code></pre>
+<p>The brunch command is the same as lunch and mka bacon combined.
+If we are building lineage, it&rsquo;ll build without any error (most of the time).</p>
+<h3 id="getting-the-zip">getting the zip<a class="anchor" href="#getting-the-zip">#</a></h3>
+<p>After the build is done, you should see some completion message.
+To find your build, go to the following directory:</p>
+<pre><code class="language-bash">cd out/target/product
+</code></pre>
+<p>Here you&rsquo;ll find a folder for your device and a compiled zip inside that folder along with other stuff, just copy that zip to your device and flash via TWRP.</p>
+<p>You&rsquo;ve successfully Compiled a ROM!</p>
+
+
+              
+          </article>
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        <a class="tag__link" href="https://itexpert120.github.io/tags/android/">android</a>
+    </li>
+    <li class="tag__item">
+        <a class="tag__link" href="https://itexpert120.github.io/tags/custom/">custom</a>
+    </li>
+    <li class="tag__item">
+        <a class="tag__link" href="https://itexpert120.github.io/tags/roms/">roms</a>
+    </li></ul>
+
+ <div class="pagination">
+  
+
+  
+</div>
+
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "itexpert120" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Email"
+         href="mailto:itexpert120@gmail.com"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://itexpert120.github.io/svg/email.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="GitHub"
+         href="https://github.com/itexpert120"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://itexpert120.github.io/svg/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Instagram"
+         href="https://instagram.com/itexpert120"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://itexpert120.github.io/svg/instagram.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Twitter"
+         href="https://twitter.com/itexpert120"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://itexpert120.github.io/svg/twitter.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Facebook"
+         href="https://www.facebook.com/profile.php?id=100027466433600"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://itexpert120.github.io/svg/facebook.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p>© 2021</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>

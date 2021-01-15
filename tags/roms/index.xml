@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>itexpert120</title>
-    <link>https://itexpert120.github.io/</link>
-    <description>Recent content on itexpert120</description>
+    <title>roms on itexpert120</title>
+    <link>https://itexpert120.github.io/tags/roms/</link>
+    <description>Recent content in roms on itexpert120</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
     <lastBuildDate>Fri, 15 Jan 2021 20:22:55 +0500</lastBuildDate>
     
-	<atom:link href="https://itexpert120.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://itexpert120.github.io/tags/roms/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,18 +23,6 @@ First things First:
 requirements There are some requirements to build Android ROMs.
 As Stated by Google:
  A 64-bit environment is required for Android 2.3.x (Gingerbread) and higher versions, including the master branch. You can compile older versions on 32-bit systems. At least 250GB of free disk space to check out the code and an extra 150 GB to build it.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://itexpert120.github.io/downloads/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://itexpert120.github.io/downloads/</guid>
-      <description>downloads lineageOS 17.1 stable builds stable lineageOS 17.1 for grand prime
- https://www.androidfilehost.com/?w=files&amp;amp;flid=321629  aospextended 7.3 stable builds stable aex 7.3 for grand prime
- https://www.androidfilehost.com/?w=files&amp;amp;flid=321694  all downloads here you can find all my builds on afh
- https://www.androidfilehost.com/?w=files&amp;amp;flid=304928  </description>
     </item>
     
   </channel>
