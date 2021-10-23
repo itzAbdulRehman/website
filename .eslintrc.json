@@ -1,0 +1,14 @@
+{
+    "root": true,
+    "extends": "next",
+    "rules": {
+        "@next/next/no-document-import-in-page": "off",
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_",
+                "varsIgnorePattern": "^_"
+            }
+        ]
+    }
+}
