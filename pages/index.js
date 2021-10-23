@@ -68,7 +68,7 @@ const Page = () => {
                     Zeeshan Ahmad is a student and a passionate developer based in Pakistan
                     with a passion for building whatever digital product he desires. He has a
                     knack for building stuff, from planning to designing all by himself and
-                    find a way to solve real-life problems usnig code. When not online, he
+                    find a way to solve real-life problems using code. When not online, he
                     loves playing games or capturing pictures. Currently, he is a BSIT Student
                     at NUML.
                 </Paragraph>
