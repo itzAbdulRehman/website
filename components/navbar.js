@@ -109,6 +109,9 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
                                 <NextLink href="/downloads" passHref>
                                     <MenuItem as={Link}>Downloads</MenuItem>
                                 </NextLink>
+                                <NextLink href="https://github.com/itexpert120" target="_blank" passHref>
+                                    <MenuItem as={Link}>Github</MenuItem>
+                                </NextLink>
 
                             </MenuList>
                         </Menu>

@@ -69,8 +69,8 @@ const Page = () => {
                     with a passion for building whatever digital product he desires. He has a
                     knack for building stuff, from planning to designing all by himself and
                     find a way to solve real-life problems using code. When not online, he
-                    loves playing games or capturing pictures. Currently, he is a BSIT Student
-                    at NUML.
+                    loves playing games or capturing pictures. Currently, he is a Bsc Computer
+                    Systems Engineering Student at IUB.
                 </Paragraph>
             </Section>
 
@@ -84,7 +84,7 @@ const Page = () => {
                 </BioSection>
                 <BioSection>
                 <BioYear>2021</BioYear>
-                    Started the Bachelor&apos;s Program in Information Technology at National University of Modern Languages. 
+                    Started Bsc Program in Computer Systems Engineering at Islamia University Bahawalpur. 
                 </BioSection>
                 <BioSection>
                     <BioYear>
