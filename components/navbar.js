@@ -46,7 +46,7 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
         position="fixed"
         as="nav"
         w="100%"
-        bg={useColorModeValue('#ffffff40', '#20202380')}
+        bg={useColorModeValue('#ffffff40', '#00000040')}
         style={{ backdropFilter: 'blur(10px)' }}
         zIndex={1}
         {...props}

@@ -7,7 +7,7 @@ const LogoBox = styled.span`
     font-size: 18px;
     display: inline-flex;
     align-items: center;
-    height: 30px;
+    height: 20px;
     line-height: 20px;
     padding: 10px;
 `
@@ -23,7 +23,7 @@ const Logo = () => {
                     fontWeight="bold"
                     ml={3}
                     >
-                        Zeeshan Ahmad
+                        itexpert120
                     </Text>
                 </LogoBox>
             </a>
