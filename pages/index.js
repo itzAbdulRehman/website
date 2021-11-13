@@ -32,7 +32,7 @@ const Page = () => {
             p={3}
             textAlign="center"
             bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-            boxShadow="md" p="6" rounded="md"
+            boxShadow="md" rounded="md"
             >
                 Hello, I&apos;m an Aspiring Developer from Pakistan!
             </Box>
