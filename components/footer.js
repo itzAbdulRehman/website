@@ -1,10 +1,11 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Icon } from '@chakra-ui/react'
+import { IoCodeSlash, IoHeart } from 'react-icons/io5'
 
 const Footer = () => {
   return (
     <Box align="center" opacity={0.4} fontSize="sm">
       &copy; {new Date().getFullYear()} Zeeshan Ahmad<br/>
-      Made with ♥
+      <Icon as={IoCodeSlash}/> with <Icon as={IoHeart}/>
     </Box>
   )
 }

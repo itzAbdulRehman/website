@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { Text, useColorModeValue } from '@chakra-ui/react'
+import { Text, useColorModeValue, Icon } from '@chakra-ui/react'
 import styled from '@emotion/styled'
+import { MdOutlineAlternateEmail } from 'react-icons/md'
 
 const LogoBox = styled.span`
     font-weight: bold;
@@ -23,7 +24,7 @@ const Logo = () => {
                     fontWeight="bold"
                     ml={3}
                     >
-                        itexpert120
+                        <Icon as={MdOutlineAlternateEmail}/>itexpert120
                     </Text>
                 </LogoBox>
             </a>
