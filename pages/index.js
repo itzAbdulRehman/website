@@ -19,6 +19,8 @@ import {
     IoLogoInstagram,
     IoLogoGithub
 } from 'react-icons/io5'
+import NextLink from 'next/link'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const Page = () => {
     return (
@@ -75,7 +77,7 @@ const Page = () => {
                 <Box align="center" my={4}>
                     <NextLink href="/projects">
                         <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                        My Projects
+                        My Work
                         </Button>
                     </NextLink>
                 </Box>
