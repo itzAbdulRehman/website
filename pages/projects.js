@@ -35,7 +35,7 @@ const Projects = () => {
                 </Section>
                 <Section>
                     <ProjectsGridItem title="PSL DashBoard"
-                                      thumbnail={thumbAPO}
+                                      thumbnail={thumbDashboard}
                                       link="https://public.tableau.com/app/profile/abdulrehman.shoukat/viz/PSLDashBoard/Story3"
                                       >
                         An Attractive DashBoard on PSL 
