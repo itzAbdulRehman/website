@@ -72,15 +72,12 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
                 mt={{base: 4, nmd: 0}}
                 >
                     
-                    <LinkItem href="/posts" path={path}>
-                    Posts
-                    </LinkItem>
-                    <LinkItem href="/downloads" path={path}>
-                    Downloads
+                    <LinkItem href="/projects" path={path}>
+                    Projects
                     </LinkItem>
                     <LinkItem
                         _target="_blank"
-                        href="https://github.com/itexpert120"
+                        href="https://github.com/ItzAbdulRehman"
                         path={path}
                         display="inline-flex"
                         alignItems="center"
@@ -103,13 +100,10 @@ const LinkItem = ({ href, path, _target, children, ...props }) => {
                                 <NextLink href="/" passHref>
                                     <MenuItem as={Link}>About</MenuItem>
                                 </NextLink>
-                                <NextLink href="/posts" passHref>
-                                    <MenuItem as={Link}>Posts</MenuItem>
+                                <NextLink href="/projects" passHref>
+                                    <MenuItem as={Link}>Projects</MenuItem>
                                 </NextLink>
-                                <NextLink href="/downloads" passHref>
-                                    <MenuItem as={Link}>Downloads</MenuItem>
-                                </NextLink>
-                                <NextLink href="https://github.com/itexpert120" target="_blank" passHref>
+                                <NextLink href="https://github.com/ItzAbdulRehman" target="_blank" passHref>
                                     <MenuItem as={Link}>Github</MenuItem>
                                 </NextLink>
 

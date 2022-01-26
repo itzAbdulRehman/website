@@ -24,7 +24,7 @@ const Logo = () => {
                     fontWeight="bold"
                     ml={3}
                     >
-                        <Icon as={MdOutlineAlternateEmail}/>itexpert120
+                        <Icon as={MdOutlineAlternateEmail}/>ItzAbdulRehman
                     </Text>
                 </LogoBox>
             </a>

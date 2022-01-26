@@ -6,15 +6,15 @@ import Section from '../components/sections'
 // import thumbTerminal from '../public/img/terminal.png'
 // import Paragraph from '../components/paragraph'
 
-const Posts = () => {
+const Projects = () => {
     return (
         <Layout>
         <Container>
             <Heading as="h3" fontSize={20} mb={4}>
-                Posts
+                Projects
             </Heading>
 
-            <Center><p>No Posts Yet</p></Center>
+            <Center><p>No Projects Yet</p></Center>
 
             <SimpleGrid columns={2} gap={6}>
                 <Section>
@@ -26,4 +26,4 @@ const Posts = () => {
     )
 }
 
-export default Posts
+export default Projects
