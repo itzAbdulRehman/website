@@ -16,7 +16,7 @@ const Projects = () => {
 
             <SimpleGrid columns={2} gap={6}>
                 <Section>
-                    <ProjectsGridItem id="Productivity-Optimization-Engine" title="Productivity Optimization Engine" thumbnail={thumbAPO}>
+                    <ProjectsGridItem title="Productivity Optimization Engine" thumbnail={thumbAPO}>
                         Agricultural Productivity Optimization Engine
                     </ProjectsGridItem>
                 </Section>
