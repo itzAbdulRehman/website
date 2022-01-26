@@ -67,7 +67,7 @@ const Page = () => {
                     <p style={{paddingBottom: 5}}>Work</p>
                 </Heading>
                 <Paragraph>
-                    Abdul Rehman is a student and a passionate developer based in Pakistan
+                    AbdulRehman is a student and a passionate developer based in Pakistan
                     with a passion for building whatever digital product he desires. He has a
                     knack for building stuff, from planning to designing all by himself and
                     find a way to solve real-life problems using code. When not online, he
