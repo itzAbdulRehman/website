@@ -1,10 +1,10 @@
 import { Container, Heading, SimpleGrid, Center } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/sections'
-// import { PostsGridItem } from '../components/grid-item'
+import { ProjectsGridItem } from '../components/grid-item'
 
-// import thumbTerminal from '../public/img/terminal.png'
-// import Paragraph from '../components/paragraph'
+// images
+import thumbAPO from '../public/img/agriculture_productivity_optimizer/thumb.jpeg'
 
 const Projects = () => {
     return (
@@ -14,11 +14,11 @@ const Projects = () => {
                 Projects
             </Heading>
 
-            <Center><p>No Projects Yet</p></Center>
-
             <SimpleGrid columns={2} gap={6}>
                 <Section>
-                    {/* ... */}
+                    <ProjectsGridItem id="Productivity-Optimization-Engine" title="Productivity Optimization Engine" thumbnail={thumbAPO}>
+                        Agricultural Productivity Optimization Engine
+                    </ProjectsGridItem>
                 </Section>
             </SimpleGrid>
         </Container>
