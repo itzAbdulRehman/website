@@ -6,6 +6,7 @@ import { ProjectsGridItem } from '../components/grid-item'
 // images
 import thumbAPO from '../public/img/agriculture_productivity_optimizer/thumb.jpeg'
 import thumbSpotify from '../public/img/spotify/spotify.jpg'
+import thumbDashboard from '../public/img/Dashboard/Dashboard.jpg'
 
 const Projects = () => {
     return (
@@ -30,6 +31,14 @@ const Projects = () => {
                                       link="https://github.com/itzAbdulRehman/Spotify-Recommendation-Engine"
                                       >
                         Suggest songs with respect to user interest.
+                    </ProjectsGridItem>
+                </Section>
+                <Section>
+                    <ProjectsGridItem title="PSL DashBoard"
+                                      thumbnail={thumbAPO}
+                                      link="https://public.tableau.com/app/profile/abdulrehman.shoukat/viz/PSLDashBoard/Story3"
+                                      >
+                        An Attractive DashBoard on PSL 
                     </ProjectsGridItem>
                 </Section>
             </SimpleGrid>
