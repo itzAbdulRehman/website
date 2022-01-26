@@ -5,6 +5,7 @@ import { ProjectsGridItem } from '../components/grid-item'
 
 // images
 import thumbAPO from '../public/img/agriculture_productivity_optimizer/thumb.jpeg'
+import thumbSpotify from '../public/img/spotify/spotify.png'
 
 const Projects = () => {
     return (
@@ -16,8 +17,19 @@ const Projects = () => {
 
             <SimpleGrid columns={2} gap={6}>
                 <Section>
-                    <ProjectsGridItem title="Productivity Optimization Engine" thumbnail={thumbAPO}>
-                        Agricultural Productivity Optimization Engine
+                    <ProjectsGridItem title="Productivity Optimization Engine"
+                                      thumbnail={thumbAPO}
+                                      link="https://github.com/itzAbdulRehman/Optimization-Production-Engine"
+                                      >
+                        Build a Predictive Mode so as to suggest the most suitable crops to grow based on the available Climate and Soil conditions.
+                    </ProjectsGridItem>
+                </Section>
+                <Section>
+                    <ProjectsGridItem title="Spotify Recommendation Engine"
+                                      thumbnail={thumbSpotify}
+                                      link="https://github.com/itzAbdulRehman/Spotify-Recommendation-Engine"
+                                      >
+                        Suggest songs with respect to user interest.
                     </ProjectsGridItem>
                 </Section>
             </SimpleGrid>
