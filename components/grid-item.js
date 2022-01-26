@@ -44,7 +44,7 @@ export const DownloadsGridItem = ({ children, id, title, thumbnail }) => (
 
 export const ProjectsGridItem = ({ children, id, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
-    <NextLink href={`/posts/${id}`}>
+    <NextLink href={`https://github.com/itzAbdulRehman/Optimization-Production-Engine`}>
       <LinkBox cursor="pointer">
         <Image
           src={thumbnail}
@@ -52,7 +52,7 @@ export const ProjectsGridItem = ({ children, id, title, thumbnail }) => (
           className="grid-item-thumbnail"
           placeholder="blur"
         />
-        <LinkOverlay href={`/downloads/${id}`}>
+        <LinkOverlay href={`https://github.com/itzAbdulRehman/Optimization-Production-Engine`}>
           <Text mt={2} fontSize={20}>
             {title}
           </Text>
