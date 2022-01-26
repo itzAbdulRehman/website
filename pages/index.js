@@ -72,6 +72,13 @@ const Page = () => {
                     loves playing games or capturing pictures. Currently, he is a BS Data
                     Science Student at Islamia University.
                 </Paragraph>
+                <Box align="center" my={4}>
+                    <NextLink href="/projects">
+                        <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                        My Projects
+                        </Button>
+                    </NextLink>
+                </Box>
             </Section>
 
             <Section delay={0.1}>
