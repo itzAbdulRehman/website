@@ -108,7 +108,9 @@ const Page = () => {
                     <p style={{paddingBottom: 5}}>I Love</p>
                 </Heading>
                 <Paragraph>
-                    Data Analysis,Data Visualization, Dashboarding, Photography, Gaming
+                    Data Analysis, Data Visualization, Dashboarding, {' '}
+                    <Link href="https://www.instagram.com/itz.abdulrehman_786" target="_blank">Photography {' '} <ExternalLinkIcon mx="2px" /></Link>
+                    , Gaming
                 </Paragraph>
             </Section>
 
