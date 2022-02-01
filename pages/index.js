@@ -64,15 +64,15 @@ const Page = () => {
 
             <Section delay={0.1}>
                 <Heading as="h3" variant="section-title">
-                    <p style={{paddingBottom: 5}}>Work</p>
+                    <p style={{paddingBottom: 5}}>Info</p>
                 </Heading>
                 <Paragraph>
                     AbdulRehman is a student and a passionate developer based in Pakistan
                     with a passion for building whatever digital product he desires. He has a
                     knack for building stuff, from planning to designing all by himself and
                     find a way to solve real-life problems using code. When not online, he
-                    loves playing games or capturing pictures. Currently, he is a BS Data
-                    Science Student at Islamia University.
+                    loves playing games or capturing pictures. Recently, he is graduated in 
+                    Data Science from DevNation.
                 </Paragraph>
                 <Box align="center" my={4}>
                     <NextLink href="/projects">
@@ -99,7 +99,7 @@ const Page = () => {
                     <BioYear>
                         Present
                     </BioYear>
-                    Studying.
+                    Studying...
                 </BioSection>
             </Section>
 
@@ -108,9 +108,7 @@ const Page = () => {
                     <p style={{paddingBottom: 5}}>I Love</p>
                 </Heading>
                 <Paragraph>
-                    Data Analysis, Data Visualization, Dashboarding, {' '}
-                    <Link href="https://www.instagram.com/itz.abdulrehman_786" target="_blank">Photography {' '} <ExternalLinkIcon mx="2px" /></Link>
-                    , Gaming
+                    Data Analysis,Data Visualization, Dashboarding, Photography, Gaming
                 </Paragraph>
             </Section>
 
