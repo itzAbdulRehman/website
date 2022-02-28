@@ -39,7 +39,7 @@ const Projects = () => {
                                       link="https://public.tableau.com/app/profile/abdulrehman.shoukat/viz/PSLDashBoard/Story3"
                                       >
                         An Attractive DashBoard on PSL
-                        </ProjectsGridItem>
+                    </ProjectsGridItem>
                 </Section>
                 <Section>
                     <ProjectsGridItem title="Data Analysis"
@@ -48,7 +48,7 @@ const Projects = () => {
                                       >
                         Summerizing DevNation Data and performing EDA on Data to give the answers of Investors    
                     </ProjectsGridItem>
-                    
+
                 
                 </Section>
             </SimpleGrid>
