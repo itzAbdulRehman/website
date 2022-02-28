@@ -7,7 +7,7 @@ import { ProjectsGridItem } from '../components/grid-item'
 import thumbAPO from '../public/img/agriculture_productivity_optimizer/thumb.jpeg'
 import thumbSpotify from '../public/img/spotify/spotify.jpg'
 import thumbDashboard from '../public/img/Dashboard/Dashboard.jpg'
-import thumbData_Analysis from '../public/img/Data_Analysis/Data_Analysis.jpg'
+import thumbData_Analysis from '../public/img/Data_Analysis/Data_Analysis.png'
 
 const Projects = () => {
     return (
